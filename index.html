@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile Fix -->
     <title>Rushikesh Chandanshiv</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
@@ -20,7 +21,6 @@
             color: white;
         }
 
-        /* Background Video */
         video.background-video {
             position: absolute;
             top: 50%;
@@ -35,7 +35,6 @@
             transition: opacity 1.5s ease;
         }
 
-        /* Enter Screen */
         #enterScreen {
             height: 100vh;
             width: 100%;
@@ -48,26 +47,27 @@
             position: absolute;
             top: 0;
             left: 0;
+            text-align: center;
+            padding: 20px;
         }
 
-            #enterScreen button {
-                padding: 15px 30px;
-                font-size: 20px;
-                background: #00ffea;
-                border: none;
-                border-radius: 50px;
-                cursor: pointer;
-                color: #0d0d0d;
-                font-weight: bold;
-                transition: 0.3s;
-            }
+        #enterScreen button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background: #00ffea;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            color: #0d0d0d;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-                #enterScreen button:hover {
-                    background: #00ccbb;
-                    transform: scale(1.1);
-                }
+        #enterScreen button:hover {
+            background: #00ccbb;
+            transform: scale(1.1);
+        }
 
-        /* Main Content */
         #mainContent {
             display: none;
             height: 100vh;
@@ -87,28 +87,29 @@
             border-radius: 20px;
             backdrop-filter: blur(10px);
             box-shadow: 0 0 20px rgba(0, 255, 234, 0.4);
+            max-width: 400px;
+            width: 100%;
         }
 
         img {
-            width: 140px;
-            height: 140px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid rgba(0, 255, 234, 0.7);
             margin-bottom: 20px;
-            background: transparent;
             box-shadow: 0 0 20px rgba(0, 255, 234, 0.7);
         }
 
         h1 {
-            font-size: 28px;
+            font-size: 24px;
             margin-bottom: 8px;
         }
 
         p {
             font-size: 16px;
             color: #ccc;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .social-links {
@@ -116,30 +117,29 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
-            margin-top: 20px;
         }
 
-            .social-links a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 55px;
-                height: 55px;
-                border-radius: 50%;
-                background: #1a1a1a;
-                color: white;
-                font-size: 24px;
-                transition: 0.3s;
-                text-decoration: none;
-                border: 2px solid #333;
-            }
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #1a1a1a;
+            color: white;
+            font-size: 22px;
+            transition: 0.3s;
+            text-decoration: none;
+            border: 2px solid #333;
+        }
 
-                .social-links a:hover {
-                    background: #00ffea;
-                    color: #0d0d0d;
-                    transform: scale(1.1);
-                    border-color: #00ffea;
-                }
+        .social-links a:hover {
+            background: #00ffea;
+            color: #0d0d0d;
+            transform: scale(1.1);
+            border-color: #00ffea;
+        }
 
         .footer {
             position: fixed;
@@ -148,10 +148,34 @@
             text-align: center;
             color: #00ffea;
             font-size: 14px;
-            letter-spacing: 1px;
             z-index: 5;
         }
 
+        /* Media Query for phones */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .profile-box {
+                padding: 20px;
+            }
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .social-links a {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -195,8 +219,6 @@
         Designed by Rushikesh
     </footer>
 
-
-    <!-- Script -->
     <script>
         function startExperience() {
             document.getElementById('enterScreen').style.display = 'none';
